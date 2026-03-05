@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-manrope);
+
+  /* Semantic Variables (Mapped to Tailwind Defaults) */
+  --color-page: var(--color-gray-50);
+  --color-surface: var(--color-white);
+
+  --shadow-soft: var(--shadow-sm);
+  --shadow-card: var(--shadow-md);
+  --shadow-popover: var(--shadow-lg);
+
+  /* Shadcn standard mappings */
+  --color-background: var(--color-page);
+  --color-foreground: var(--color-gray-900);
+  --color-card: var(--color-surface);
+  --color-card-foreground: var(--color-gray-900);
+  --color-popover: var(--color-surface);
+  --color-popover-foreground: var(--color-gray-900);
+  --color-primary: var(--color-neutral-900);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-neutral-100);
+  --color-secondary-foreground: var(--color-neutral-900);
+  --color-muted: var(--color-neutral-100);
+  --color-muted-foreground: var(--color-neutral-500);
+  --color-accent: var(--color-neutral-100);
+  --color-accent-foreground: var(--color-neutral-900);
+  --color-destructive: var(--color-neutral-900);
+  --color-destructive-foreground: var(--color-white);
+  --color-border: var(--color-neutral-200);
+  --color-input: var(--color-neutral-200);
+  --color-ring: var(--color-neutral-900);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Typography Utility Classes based on spec */
+@layer utilities {
+  .display-lg {
+    @apply text-[56px] leading-[64px] font-bold;
+  }
+
+  .display-md {
+    @apply text-[48px] leading-[56px] font-bold;
+  }
+
+  .heading-xl {
+    @apply text-[40px] leading-[48px] font-bold;
+  }
+
+  .heading-lg {
+    @apply text-[32px] leading-[40px] font-semibold;
+  }
+
+  .heading-md {
+    @apply text-[24px] leading-[32px] font-semibold;
+  }
+
+  .heading-sm {
+    @apply text-[20px] leading-[28px] font-semibold;
+  }
+
+  .body-lg {
+    @apply text-[18px] leading-[28px] font-medium;
+  }
+
+  .body-md {
+    @apply text-[16px] leading-[24px] font-medium;
+  }
+
+  .body-sm {
+    @apply text-[14px] leading-[20px] font-medium;
+  }
+
+  .label-md {
+    @apply text-[14px] leading-[20px] font-semibold;
+  }
+
+  .label-sm {
+    @apply text-[12px] leading-[16px] font-semibold;
+  }
+}
