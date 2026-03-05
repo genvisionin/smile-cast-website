@@ -7,25 +7,25 @@ export function Treatments() {
     const treatments = [
         {
             title: "Teeth whitening",
-            details: "Upload a patient's photo to instantly visualize different shades of whitening, allowing them to see their brighter smile before committing.",
+            details: "Walk patients through every shade on the VITA scale and let them choose their target. The moment they pick their shade, the case is nearly closed.",
             icon: Sparkles,
             color: "var(--color-neutral-900)",
         },
         {
             title: "Veneers",
-            details: "Instantly simulate custom veneer placements on any uploaded image, showing patients exactly how their new smile will comfortably fit their face.",
+            details: "Veneer consultations live or die on the patient's ability to imagine the result. Show them their Hollywood smile in 20 seconds and watch the conversation change.",
             icon: LayoutTemplate,
             color: "var(--color-neutral-700)",
         },
         {
             title: "Straightening",
-            details: "Visualize the final alignment of crowded or gapped teeth by simply uploading a before photo—perfect for clear aligner consultations.",
+            details: "For patients sitting on the fence about aligners vs braces, seeing the final alignment removes the hesitation better than any before/after photo library.",
             icon: AlignCenter,
             color: "var(--color-neutral-500)",
         },
         {
             title: "Gum correction",
-            details: "Show patients how gum contouring will enhance their smile proportions with our rapid AI visualization from a single photo.",
+            details: "Gummy smile correction is one of the most underbooked treatments — only because patients don't know it's possible. One simulation changes that.",
             icon: Activity,
             color: "var(--color-neutral-400)",
         }

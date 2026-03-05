@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Camera, Sparkles, Share2 } from "lucide-react";
+import { Stats } from "@/components/Stats";
 
 export function HowItWorks() {
     const steps = [
@@ -21,7 +22,7 @@ export function HowItWorks() {
             badge: "03",
             icon: Share2,
             title: "Share with your patient",
-            body: "The simulation is ready in 20 seconds. Show it chairside or send a branded link directly to their phone.",
+            body: "The simulation is ready in 20 seconds. Show it chairside or send a branded link directly to their phone or email.",
         }
     ];
 
@@ -74,6 +75,10 @@ export function HowItWorks() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Stats Card underneath */}
+                <Stats />
+
             </div>
         </section>
     );

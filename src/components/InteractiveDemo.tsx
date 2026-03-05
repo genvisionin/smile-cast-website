@@ -66,10 +66,10 @@ export function InteractiveDemo() {
                         INTERACTIVE DEMO
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900 mb-4">
-                        Drag to compare.
+                        This is the moment they say yes.
                     </h2>
                     <p className="text-lg md:text-xl font-medium text-neutral-500">
-                        This is exactly what your patients will see.
+                        Drag to compare — this is exactly what your patient sees.
                     </p>
                 </div>
 

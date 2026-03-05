@@ -17,8 +17,6 @@ export default function Home() {
     <main className="min-h-screen bg-page flex flex-col">
       <Navbar />
       <Hero />
-      <SocialProof />
-      <Stats />
       <HowItWorks />
       <FeaturesBento />
       <InteractiveDemo />

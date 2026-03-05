@@ -50,9 +50,7 @@ export function Hero() {
                     </h1>
 
                     <motion.p {...getAnimation(0.18)} className="text-lg md:text-xl font-medium text-neutral-500 max-w-[480px] mb-8">
-                        Smilecast generates hyper-realistic smile simulations in seconds.
-                        Increase case acceptance, reduce consultation time, and give
-                        patients the confidence to say yes — right in the chair.
+                        Every day, patients leave your chair saying 'I need to think about it.' Smilecast shows them their result before they walk out — so they book instead of hesitating.
                     </motion.p>
 
                     <motion.div {...getAnimation(0.24)} className="flex flex-col sm:flex-row gap-3 mb-6">

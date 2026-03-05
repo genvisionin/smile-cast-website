@@ -1,28 +1,22 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
 
 export function Pricing() {
-    const [isAnnual, setIsAnnual] = useState(false);
 
     const plans = [
         {
             name: "Base",
-            monthlyPrice: 60,
-            annualPrice: 50,
+            monthlyPrice: 49,
             tagline: "Perfect for solo practices",
-            simulations: "70 simulations/month",
+            simulations: "60 simulations/month",
             quality: "1K image quality",
             features: [
                 "All 4 treatments",
-                "All sub-controls and shade settings",
                 "Shareable patient links (30-day expiry)",
                 "Clinic logo on patient link",
-                "1 user seat",
                 "Email support",
             ],
             isPopular: false,
@@ -31,19 +25,14 @@ export function Pricing() {
         {
             name: "Pro",
             monthlyPrice: 99,
-            annualPrice: 82,
             tagline: "For active cosmetic practices",
             simulations: "150 simulations/month",
             quality: "2K image quality",
             features: [
                 "Everything in Base",
-                "2K image quality",
                 "Permanent patient links (no expiry)",
                 "Before/after slider on patient link",
-                "Multi-treatment comparison view",
                 "Analytics dashboard",
-                "3 user seats",
-                "Custom brand colors on patient link",
                 "Priority generation queue",
                 "Chat + email support",
             ],
@@ -51,20 +40,15 @@ export function Pricing() {
             btnVariant: "default" as const,
         },
         {
-            name: "Ultra",
+            name: "Max",
             monthlyPrice: 159,
-            annualPrice: 132,
             tagline: "For high-volume & multi-dentist clinics",
-            simulations: "300 simulations/month",
-            quality: "4K image quality",
+            simulations: "250 simulations/month",
+            quality: "2K image quality",
             features: [
                 "Everything in Pro",
-                "4K image quality",
-                "8 user seats",
                 "White-label patient links (your domain)",
                 "Promo code & offer sending to patients",
-                "During-treatment appliance visualization",
-                "Advanced analytics & ROI estimator",
                 "Payment plan builder for patients",
                 "Dedicated onboarding call",
                 "Priority support — 4hr SLA",
@@ -90,25 +74,8 @@ export function Pricing() {
                     </p>
                 </div>
 
-                {/* Toggle */}
-                <div className="flex items-center justify-center gap-4 mb-16">
-                    <span className={`text-sm font-semibold transition-colors ${!isAnnual ? 'text-neutral-900' : 'text-neutral-500'}`}>
-                        Monthly
-                    </span>
-                    <Switch
-                        checked={isAnnual}
-                        onCheckedChange={setIsAnnual}
-                        className="data-[state=checked]:bg-neutral-900"
-                    />
-                    <div className="flex items-center gap-2">
-                        <span className={`text-sm font-semibold transition-colors ${isAnnual ? 'text-neutral-900' : 'text-neutral-500'}`}>
-                            Annual
-                        </span>
-                        <span className="text-xs font-semibold text-neutral-600 bg-neutral-100 px-2 py-0.5 rounded-sm">
-                            Save 17%
-                        </span>
-                    </div>
-                </div>
+                {/* Space instead of toggle */}
+                <div className="mb-16"></div>
 
                 {/* Pricing Cards */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -132,31 +99,14 @@ export function Pricing() {
 
                             <div className="mb-1 flex items-end">
                                 <span className={`text-4xl md:text-5xl font-bold tracking-tight font-bold leading-none ${plan.isPopular ? 'text-white' : 'text-neutral-900'}`}>
-                                    $
-                                    <AnimatePresence mode="popLayout">
-                                        <motion.span
-                                            key={isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: 10 }}
-                                            transition={{ duration: 0.2 }}
-                                            className="inline-block"
-                                        >
-                                            {isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                                        </motion.span>
-                                    </AnimatePresence>
+                                    ${plan.monthlyPrice}
                                 </span>
                                 <span className={`text-base font-medium ml-1 pb-1 ${plan.isPopular ? 'text-neutral-500' : 'text-neutral-500'}`}>
                                     /month
                                 </span>
                             </div>
 
-                            {isAnnual && (
-                                <div className={`text-sm font-medium mb-4 ${plan.isPopular ? 'text-neutral-500' : 'text-neutral-500'}`}>
-                                    billed annually
-                                </div>
-                            )}
-                            {!isAnnual && <div className="h-[20px] mb-4"></div> /* spacer */}
+                            <div className="h-[20px] mb-4"></div> {/* spacer */}
 
                             <p className={`text-sm font-medium ${plan.isPopular ? 'text-neutral-400' : 'text-neutral-500'} mb-6`}>
                                 {plan.tagline}

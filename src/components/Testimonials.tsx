@@ -5,19 +5,13 @@ import { motion } from "framer-motion";
 export function Testimonials() {
     const testimonials = [
         {
-            quote: "We used to spend 20 minutes explaining what veneers could look like. Now we show them in 30 seconds and they're already asking about booking dates.",
-            name: "Dr. Sarah M.",
-            clinic: "London, UK",
+            quote: "Consultations that used to end with 'I'll think about it' now end with a booking.",
         },
         {
-            quote: "The shareable link changed how we close cases. Patients go home, show their partner, and call back the next morning ready to commit.",
-            name: "Dr. James K.",
-            clinic: "Dubai, UAE",
+            quote: "Patients share their simulation with family before the next appointment — and come back decided.",
         },
         {
-            quote: "Five minutes to set up. Our logo, our colors. Patients think we built it ourselves. That's exactly what we wanted.",
-            name: "Dr. Priya R.",
-            clinic: "New York, USA",
+            quote: "Setup takes 5 minutes. Patients assume you built it yourself.",
         }
     ];
 
@@ -30,7 +24,7 @@ export function Testimonials() {
                         FROM THE CHAIR
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
-                        What dentists are saying.
+                        Why dentists choose Smilecast
                     </h2>
                 </div>
 
@@ -54,10 +48,7 @@ export function Testimonials() {
                                 &quot;{t.quote}&quot;
                             </p>
 
-                            <div className="mt-auto">
-                                <div className="text-sm font-semibold text-neutral-900">{t.name}</div>
-                                <div className="text-sm font-medium text-neutral-500">{t.clinic}</div>
-                            </div>
+                            {/* Removed attribution block entirely as they are now outcome observations */}
                         </motion.div>
                     ))}
                 </div>
